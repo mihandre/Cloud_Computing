@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const messagesRouter = require("./router/messagesRouter");
 const translateRouter = require("./router/translateRouter");
 const sendgridRouter = require("./router/sendgridRouter");
+const searchMovieRouter = require("./router/searchMovieRouter");
 
 const app = express();
 app.use(cors());
@@ -13,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/messages", messagesRouter);
 app.use("/utils", translateRouter);
 app.use("/mail", sendgridRouter);
+app.use("/search", searchMovieRouter);
 
 const port = process.env.PORT || 8080;
 
