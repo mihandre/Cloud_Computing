@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const router = express.Router();
 const { searchMovie } = require("../utils/knowledgeFunctions");
 
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
   const { query, limit } = req.body;
   if (!query || !limit) {
     return res.status(400).send("Missing Parameters");
