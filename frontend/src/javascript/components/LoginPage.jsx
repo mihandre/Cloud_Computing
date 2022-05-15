@@ -16,7 +16,7 @@ function Login() {
     }
 
     return (
-        <div id="signInButton">
+        <div id="signInButton" style={{margin: 0, position: 'absolute', top: '50%', left: '50%', transform: "translate(-50%, -50%)"}}>
             <GoogleLogin
                 clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
                 buttonText="Login"

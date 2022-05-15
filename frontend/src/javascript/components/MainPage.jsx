@@ -44,10 +44,10 @@ function MainPage() {
             <nav className='text-right p-2'>
             <Logout></Logout>
             </nav>
-            <h1 className='mt-10 text-blue-600'>Main Page</h1>
+            <h1 className='mg-10 text-blue font-black'>Search for a movie!</h1>
         <div className="flex-row">
         <span className="mr-6">Search:</span>
-        <input class="border-4"
+        <input className="border-4"
                 type="text"
                 id="searchText"
                 name="searchText"
@@ -60,7 +60,7 @@ function MainPage() {
 
       
       </div>
-      <div>
+      <div className="p-10 mg-5 font-medium">
           {movieDetails}
       </div>
         </div>
