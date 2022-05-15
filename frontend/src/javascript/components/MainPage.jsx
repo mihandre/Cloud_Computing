@@ -30,7 +30,7 @@ function MainPage() {
         resultsData = response.itemListElement[0].result;
         console.log(resultsData);
 
-        if(resultsData["@type"].includes("Movie")) {
+        if(resultsData["@type"].includes("Movie") || resultsData["@type"].includes("MovieSeries") || resultsData["@type"].includes("CreativeWork")) {
             setMovieDetails(resultsData.detailedDescription.articleBody)
         } else {
             setMovieDetails("No movie found!");
